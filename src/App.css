@@ -1,0 +1,33 @@
+/* Accessibility Focus Styles */
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid #ffa500;
+  outline-offset: 2px;
+}
+
+/* Button hover and active states */
+button:hover {
+  background-color: #006a8e !important;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button,
+  textarea {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  button,
+  * {
+    transition: none !important;
+  }
+}
